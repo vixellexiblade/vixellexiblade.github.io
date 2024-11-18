@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "JetBrains Mono";
+    src: url(fonts/JetBrainsMono-Regular.ttf) format("truetype");
+}
+
 body {
     background-color: rgb(34, 34, 36);
     color: azure;
@@ -38,7 +43,7 @@ footerText {
 }
 
 monospace {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'JetBrains Mono','Courier New', Courier, monospace;
 }
 
 .centerflex {
