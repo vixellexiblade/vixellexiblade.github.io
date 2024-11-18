@@ -62,6 +62,10 @@ monospace {
     background: -webkit-linear-gradient(rgb(202, 202, 202), rgb(83, 83, 83));
 }
 
+.warning-gradient {
+    background: -webkit-linear-gradient(rgb(228, 196, 54), rgb(219, 153, 77));
+}
+
 .text-color {
     background-clip: content-box;
     -webkit-background-clip: text;
@@ -72,7 +76,11 @@ monospace {
     text-align: center;
 }
 
-.sidemargin {
+.p-4 {
+    padding: 0.5rem;
+}
+
+.m-px-0101 {
     margin: 0 1px 0 1px;
 }
 
