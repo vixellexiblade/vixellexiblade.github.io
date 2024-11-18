@@ -7,7 +7,7 @@ body {
 div.main {
     background-color: rgb(60, 60, 60);
     margin: 0.5% auto 0.5% auto;
-    padding: 0.5em 2em 0.5em 2em;
+    padding: 6px 2em 6px 2em;
     word-wrap: break-word;
     max-width: 600px;
 }
@@ -22,6 +22,9 @@ a:visited {
     text-decoration: none;
 }
 
+h3 {
+    text-align: center;
+}
 
 warn {
     font-style: italic;
@@ -30,36 +33,31 @@ warn {
     font-size: small;
 }
 
-footer {
-    background-color: rgb(28, 28, 29);
-    margin-top: auto;
-}
-
 footerText {
     font-size: small;
 }
 
-h3 {
-    text-align: center;
+monospace {
+    font-family: 'Courier New', Courier, monospace;
 }
 
-div.links {
+.centerflex {
     padding: 8px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-#footerbuttons {
-    padding: 8px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .vix-gradient {
     background: -webkit-linear-gradient(rgb(0, 210, 255), rgb(43, 114, 255));
+}
+
+.disabled-gradient {
+    background: -webkit-linear-gradient(rgb(202, 202, 202), rgb(83, 83, 83));
+}
+
+.text-color {
     background-clip: content-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -69,9 +67,12 @@ div.links {
     text-align: center;
 }
 
+.sidemargin {
+    margin: 0 1px 0 1px;
+}
+
 a.button {
     padding: 3px 6px;
     color: #fafafa;
-    background: -webkit-linear-gradient(rgb(0, 210, 255), rgb(43, 114, 255));
     text-decoration: none;
 }
