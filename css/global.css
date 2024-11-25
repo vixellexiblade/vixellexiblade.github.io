@@ -47,10 +47,6 @@ h3 {
     vertical-align: super;
 }
 
-footerText {
-    font-size: small;
-}
-
 .monospace {
     font-family: 'JetBrains Mono','Courier New', Courier, monospace;
 }
@@ -64,21 +60,20 @@ footerText {
 }
 
 .vix-gradient {
-    background: -webkit-linear-gradient(rgb(0, 210, 255), rgb(43, 114, 255));
+    background: linear-gradient(rgb(0, 210, 255), rgb(43, 114, 255));
 }
 
 .disabled-gradient {
-    background: -webkit-linear-gradient(rgb(202, 202, 202), rgb(83, 83, 83));
+    background: linear-gradient(rgb(202, 202, 202), rgb(83, 83, 83));
 }
 
 .warning-gradient {
-    background: -webkit-linear-gradient(rgb(228, 196, 54), rgb(219, 153, 77));
+    background: linear-gradient(rgb(228, 196, 54), rgb(219, 153, 77));
 }
 
-.text-color {
-    background-clip: content-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.text-bgoverlay-color {
+    background-clip: text;
+    color: rgba(0,0,0,0);
 }
 
 .center-text {
