@@ -31,18 +31,27 @@ h3 {
     text-align: center;
 }
 
-warn {
-    font-style: italic;
+.warn {
     color: rgb(228, 196, 54);
-    vertical-align: super;
+}
+
+.font-small {
     font-size: small;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.super {
+    vertical-align: super;
 }
 
 footerText {
     font-size: small;
 }
 
-monospace {
+.monospace {
     font-family: 'JetBrains Mono','Courier New', Courier, monospace;
 }
 
