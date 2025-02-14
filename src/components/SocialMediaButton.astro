@@ -1,0 +1,11 @@
+---
+const { link } = Astro.props;
+
+---
+
+<a href={link.link}>
+    <div class="bg-gray-900 ml-1">
+        <div class="bg-blue-600">{link.icon?link.icon:'?'}</div>
+        <div class="p-1 text-sm">{link.title}</div>
+    </div>
+</a>

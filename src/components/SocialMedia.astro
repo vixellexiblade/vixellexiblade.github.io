@@ -1,0 +1,14 @@
+---
+import links from "../data/socialmedia.json";
+import SocialMediaButton from "./SocialMediaButton.astro";
+
+
+---
+
+<div class="p-3">
+    <div class="flex justify-center">
+        {links.map((link:any) => (
+            <SocialMediaButton link={link} />
+        ))}
+    </div>
+</div>
