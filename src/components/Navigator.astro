@@ -2,8 +2,17 @@
 import NavigatorItem from "./NavigatorItem.astro";
 ---
 
-<div class="w-full h-12 flex mt-0.5">
+<nav class="bg-gray-800
+    flex-auto
+    w-full
+    flex
+    flex-col
+    md:flex-row
+    gap-1
+    p-1
+    "
+>
     <NavigatorItem title="Homepage" href="/" />
     <NavigatorItem title="Blog" href="/blog" />
     <NavigatorItem title="Comm ToS" href="/tos" />
-</div>
+</nav>
