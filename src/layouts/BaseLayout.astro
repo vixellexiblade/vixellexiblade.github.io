@@ -7,10 +7,10 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 
 const {
     pageTitle = "Vix's Website",
-    pageDesc = "Vixel Lexiblade's homepage for an assortment of things.",
+    pageDesc = "Vix's homepage for an assortment of things.",
     pageAuthor = "Vixel Lexiblade",
     ogTitle = "Vix's Website",
-    ogDesc = "Personal Homepage",
+    ogDesc = "Personal Homepage of Vixel Lexiblade",
     ogType = "website",
 } = Astro.props;
 ---
@@ -30,10 +30,11 @@ const {
         <title>{pageTitle}</title>
     </head>
     <body>
-        <div class="max-w-180 ml-auto mr-auto">
+        <div class="max-w-200 ml-auto mr-auto bg-gray-900">
             <Header />
             <slot />
-            <Footer canonicalUrl={canonicalUrl} />
+            
         </div>
+        <Footer canonicalUrl={canonicalUrl} />
     </body>
 </html>
