@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import Card from "../components/Card.astro";
 const { frontmatter } = Astro.props;
 ---
 
@@ -11,24 +12,11 @@ const { frontmatter } = Astro.props;
     ogDesc={frontmatter.description}
     ogType="article"
 >
-    <div class="p-3">
-        <h1 class="font-bold text-2xl">{frontmatter.title}</h1>
-        <h3 class="italic text-sm">{frontmatter.description}</h3>
-        <span class="h-0.25 w-full block bg-gray-700 mb-1 mt-1"></span>
+    <Card title={frontmatter.title}>
+        {frontmatter.description}
+    </Card>
+    <div class="prose mt-6">
         <slot />
     </div>
 </BaseLayout>
 
-<style>
-    :root{
-        h2 {
-            margin-top: 0.5rem;
-            font-weight: bold;
-            font-size: large;
-        }
-        h4 {
-            font-style: italic;
-            font-size: small;
-        }
-    }
-</style>

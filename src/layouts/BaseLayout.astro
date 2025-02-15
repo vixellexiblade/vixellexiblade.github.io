@@ -12,6 +12,7 @@ const {
     ogTitle = "Vix's Website",
     ogDesc = "Personal Homepage of Vixel Lexiblade",
     ogType = "website",
+    favicon = "/favicon.svg"
 } = Astro.props;
 ---
 
@@ -19,6 +20,7 @@ const {
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" type="image/svg+xml" href={favicon} />
         <meta name="generator" content={Astro.generator} />
         <meta name="description" content={pageDesc} />
         <meta name="author" content={pageAuthor} />
@@ -32,8 +34,9 @@ const {
     <body>
         <div class="max-w-200 ml-auto mr-auto bg-gray-900">
             <Header />
-            <slot />
-            
+            <div class="p-3">
+                <slot />
+            </div>
         </div>
         <Footer canonicalUrl={canonicalUrl} />
     </body>

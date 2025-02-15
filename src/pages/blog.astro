@@ -1,8 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true}))
+import Card from "../components/Card.astro";
+
+const allPosts = Object.values(
+    import.meta.glob("./posts/*.md", { eager: true }),
+);
 ---
 
 <BaseLayout>
-    
+    <Card title="Blog Records">
+        Here you will find all blog entries I've written.
+    </Card>
 </BaseLayout>

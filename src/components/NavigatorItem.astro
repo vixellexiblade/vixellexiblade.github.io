@@ -2,7 +2,7 @@
 const { href = "/", title = "Homepage", icon } = Astro.props;
 ---
 
-<a href={href}>
+<a href={href} data-astro-prefetch>
     <div class="p-1.5
     hover:outline-1
     self-center
