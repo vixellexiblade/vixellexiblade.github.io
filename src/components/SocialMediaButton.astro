@@ -1,11 +1,8 @@
 ---
 const { link } = Astro.props;
-
 ---
 
-<a href={link.link}>
-    <div class="bg-gray-900 ml-1">
-        <div class="bg-blue-600">{link.icon?link.icon:'?'}</div>
-        <div class="p-1 text-sm">{link.title}</div>
-    </div>
+<a href={link.link} class="p-0.5 flex bg-gray-800 transition duration-100 ease-in-out rounded-md overflow-hidden outline outline-gray-700 hover:outline-cyan-200 gap-x-3">
+        {link.icon ? link.icon : <div class="italic self-center">SVG</div>}
+        <span class="text-sm self-center">{link.title}</span>
 </a>
