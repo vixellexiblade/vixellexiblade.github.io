@@ -1,7 +1,7 @@
 ---
 layout: '../layouts/MarkdownBlogLayout.astro'
 title: 'Commissioning Terms of Service'
-description: 'A detailed overview of of terms set between the Artist and the Commissioner.'
+description: 'A detailed overview of of terms set between me and you, potential commissioner.'
 pubDate: 2025-02-14
 revDate:
 author: 'Vixel Lexiblade'
