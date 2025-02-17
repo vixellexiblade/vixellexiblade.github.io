@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
 import Card from "../components/Card.astro";
 
 const allPosts = Object.values(import.meta.glob("./posts/*.md", { eager: true }));
@@ -7,4 +8,7 @@ const allPosts = Object.values(import.meta.glob("./posts/*.md", { eager: true })
 
 <BaseLayout>
   <Card title="Blog Records"> Here you will find all blog entries I've written. </Card>
+  <div class="grid p-3 gap-3 grid-cols-1 md:grid-cols-2">
+    {allPosts.map((post: any) => <BlogPost url={post.url} frontmatter={post.frontmatter} />)}
+  </div>
 </BaseLayout>

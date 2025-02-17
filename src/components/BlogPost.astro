@@ -1,0 +1,30 @@
+---
+const { url, frontmatter } = Astro.props
+
+---
+
+<a
+  href={url}
+  class="p-1.5
+  flex
+  bg-linear-to-t
+  from-gray-900
+  to-gray-800
+  transition
+  duration-100
+  ease-in-out
+  rounded-md
+  outline
+  outline-gray-700
+  hover:outline-cyan-200
+  flex-col"
+>
+  <div class="flex justify-between">
+    <span class="font-bold">{frontmatter.title}</span>
+    <span class="italic text-xs text-gray-500 self-center text-right">
+      {frontmatter.pubDate&&frontmatter.pubDate.toString().slice(0, 10)}
+      {frontmatter.editDate&&` (Edited: ${frontmatter.editDate.toString().slice(0, 10)})`}
+    </span>
+  </div>
+  <div><span class="text-xs italic">{frontmatter.description}</span></div>
+</a>
