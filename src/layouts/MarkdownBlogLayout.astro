@@ -1,0 +1,21 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+import Card from "../components/Card.astro";
+const { frontmatter } = Astro.props;
+---
+
+<BaseLayout
+  pageTitle={frontmatter.title}
+  pageDesc={frontmatter.description}
+  pageAuthor={frontmatter.author}
+  ogTitle={frontmatter.title}
+  ogDesc={frontmatter.description}
+  ogType="article"
+>
+  <Card title={frontmatter.title}>
+    {frontmatter.description}
+  </Card>
+  <div class="prose mt-6">
+    <slot />
+  </div>
+</BaseLayout>

@@ -1,0 +1,45 @@
+---
+const { link, images } = Astro.props;
+import { Icon } from "astro-icon/components";
+---
+
+<a
+  href={link.link}
+  class="p-0.5 flex
+  bg-gray-800
+  transition duration-100
+  ease-in-out
+  rounded-md
+  overflow-hidden
+  outline
+  outline-gray-700
+  hover:outline-cyan-200
+  gap-x-3
+  socialMediaButton"
+>
+  {
+    images[`../assets/icons/${link.icon}.svg`] && (
+      <Icon class="self-center ml-1 text-white" name={link.icon} />
+    )
+  }
+  <span class="text-sm self-center">{link.title}</span>
+  <span class="socialDescription" hidden>{link.description}</span>
+</a>
+
+<script>
+  const descriptionBox = document.querySelectorAll("p.socialDescriptionBox");
+  const buttons = document.querySelectorAll("a.socialMediaButton");
+
+  buttons.forEach((button) => {
+    const description = button.lastElementChild?.textContent;
+    if (description) {
+      const updDesc = () => {
+        descriptionBox.forEach((box) => {
+          box.textContent = description;
+        });
+      }
+      button.addEventListener("mouseover", updDesc);
+      button.addEventListener("touchstart", updDesc);
+    }
+  });
+</script>

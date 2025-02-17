@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@plugin '@tailwindcss/typography';
+@config "./tailwind.config.js";
+
+:root {
+    font-family: system-ui, Helvetica, Arial, sans-serif;
+    color: azure;
+}
+
+@theme {
+    --color-vix-600: rgb(0, 210, 255);
+    --color-vix-500: rgb(43, 114, 255);
+    --color-azure: azure;
+}
