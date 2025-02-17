@@ -10,7 +10,11 @@ import icon from 'astro-icon';
 export default defineConfig({
   site: "https://lexiblade.xyz",
   prefetch: true,
-  integrations: [vue(), icon()],
+  integrations: [
+    vue(),
+    icon({
+      iconDir: "src/assets/icons",
+    })],
 
   vite: {
     plugins: [tailwindcss()]
