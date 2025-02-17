@@ -9,5 +9,5 @@ const images = import.meta.glob("../assets/icons/*.svg");
   <div class="grid grid-cols-1 md:grid-cols-3 gap-2 p-1.5">
     {links.map((link: any) => <SocialMediaButton link={link} images={images} />)}
   </div>
-  <p class="socialDescriptionBox">Hover over any of the buttons to see the description.</p>
+  <p class="socialDescriptionBox">Hover over any of the buttons to see the description.<noscript> (Wont work with JS disabled)</noscript></p>
 </div>
