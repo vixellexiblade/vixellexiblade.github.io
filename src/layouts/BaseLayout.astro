@@ -6,38 +6,38 @@ import Footer from "../components/Footer.astro";
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 
 const {
-    pageTitle = "Vix's Website",
-    pageDesc = "Vix's homepage for an assortment of things.",
-    pageAuthor = "Vixel Lexiblade",
-    ogTitle = "Vix's Website",
-    ogDesc = "Personal Homepage of Vixel Lexiblade",
-    ogType = "website",
-    favicon = "/favicon.svg"
+  pageTitle = "Vix's Website",
+  pageDesc = "Vix's homepage for an assortment of things.",
+  pageAuthor = "Vixel Lexiblade",
+  ogTitle = "Vix's Website",
+  ogDesc = "Personal Homepage of Vixel Lexiblade",
+  ogType = "website",
+  favicon = "/favicon.svg",
 } = Astro.props;
 ---
 
 <html lang="en" class="bg-gray-950">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="icon" type="image/svg+xml" href={favicon} />
-        <meta name="generator" content={Astro.generator} />
-        <meta name="description" content={pageDesc} />
-        <meta name="author" content={pageAuthor} />
-        <meta property="og:title" content={ogTitle} />
-        <meta property="og:type" content={ogType} />
-        <meta property="og:description" content={ogDesc} />
-        <meta property="og:url" content={canonicalUrl} />
-        <link rel="canonical" href={canonicalUrl} />
-        <title>{pageTitle}</title>
-    </head>
-    <body>
-        <div class="max-w-200 ml-auto mr-auto bg-gray-900">
-            <Header />
-            <div class="p-3">
-                <slot />
-            </div>
-        </div>
-        <Footer canonicalUrl={canonicalUrl} />
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href={favicon} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={pageDesc} />
+    <meta name="author" content={pageAuthor} />
+    <meta property="og:title" content={ogTitle} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:description" content={ogDesc} />
+    <meta property="og:url" content={canonicalUrl} />
+    <link rel="canonical" href={canonicalUrl} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <div class="max-w-200 ml-auto mr-auto bg-gray-900">
+      <Header />
+      <div class="p-3">
+        <slot />
+      </div>
+    </div>
+    <Footer canonicalUrl={canonicalUrl} />
+  </body>
 </html>

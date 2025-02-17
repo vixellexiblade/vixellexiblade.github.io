@@ -1,11 +1,10 @@
 ---
 const { title } = Astro.props;
-
 ---
 
 <div class="outline outline-gray-700 p-3 rounded-sm">
-    { title && <h2 class="text-2xl">{title}</h2>}
-    <div class="p-1.5">
-        <slot />
-    </div>
+  {title && <h2 class="text-2xl">{title}</h2>}
+  <div class="p-1.5">
+    <slot />
+  </div>
 </div>
