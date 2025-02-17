@@ -2,37 +2,31 @@
     {
         "title": "Bluesky",
         "link": "https://bsky.app/profile/vixel.lexiblade.xyz",
-        "description": "",
-        "icon": ""
+        "description": "You can reach out to me here. This is considered my main public channel aside from this website.",
+        "icon": "bluesky"
     },
     {
         "title": "Toyhou.se",
         "link": "https://toyhou.se/VixelLexiblade",
-        "description": "",
-        "icon": ""
+        "description": "You may review my works here as well. Not updated frequently, and may require you to have an account to see my profile.",
+        "icon": "toyhouse"
     },
     {
         "title": "FurAffinity",
         "link": "https://www.furaffinity.net/user/vixel4076",
-        "description": "",
-        "icon": ""
+        "description": "Holding account. I have no plans to upload to here yet.",
+        "icon": "furaffinity"
     },
     {
         "title": "Discord Server",
         "link": "",
-        "description": "",
-        "icon": ""
+        "description": "Currently unavailable, working on it.",
+        "icon": "discord"
     },
     {
         "title": "Trello",
         "link": "",
-        "description": "",
-        "icon": ""
-    },
-    {
-        "title": "Itaku.ee",
-        "link": "",
-        "description": "",
-        "icon": ""
+        "description": "Currently unavailable, but this is where I will place my commission queue.",
+        "icon": "trello"
     }
 ]
