@@ -33,11 +33,13 @@ import { Icon } from "astro-icon/components";
   buttons.forEach((button) => {
     const description = button.lastElementChild?.textContent;
     if (description) {
-      button.addEventListener("mouseover", () => {
+      const updDesc = () => {
         descriptionBox.forEach((box) => {
           box.textContent = description;
         });
-      });
+      }
+      button.addEventListener("mouseover", updDesc);
+      button.addEventListener("touchstart", updDesc);
     }
   });
 </script>
