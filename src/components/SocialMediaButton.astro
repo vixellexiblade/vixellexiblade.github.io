@@ -39,7 +39,7 @@ import { Icon } from "astro-icon/components";
         });
       }
       button.addEventListener("mouseover", updDesc);
-      button.addEventListener("touchstart", updDesc);
+      button.addEventListener("touchstart", updDesc, {passive: true});
     }
   });
 </script>
