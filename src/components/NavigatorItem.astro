@@ -1,20 +1,28 @@
 ---
 const { href = "/", title = "Homepage", icon } = Astro.props;
+const pathName = Astro.url.pathname;
 ---
 
 <a href={href} data-astro-prefetch>
   <div
-    class="p-1.5
-    hover:outline-1
+    class="p-0.5
+    group
     self-center
-    hover:outline-cyan-200
-    bg-gray-900
     min-w-15
     text-center
-    rounded-md
     w-full
-    md:w-auto"
+    md:w-auto
+    flex
+    flex-col
+    transition
+    duration-100"
   >
-    {title}
+    <div class="uppercase">{title}</div>
+    <div
+      class={pathName === href
+        ? "mt-0.5 w-full self-center h-0.5 bg-azure"
+        : "mt-0.5 w-full scale-x-[0] ease-in-out self-center h-0.5 bg-azure group-hover:scale-100 transition duration-100"}
+    >
+    </div>
   </div>
 </a>
