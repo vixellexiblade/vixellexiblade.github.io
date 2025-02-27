@@ -13,9 +13,14 @@ const { frontmatter } = Astro.props;
   ogType="article"
 >
   <Card title={frontmatter.title}>
+    <div class="text-sm italic text-gray-500">
+      {frontmatter.pubDate&&`Published on ${frontmatter.pubDate.toString().slice(0, 10)}`}
+      {frontmatter.editDate&&` (Edited: ${frontmatter.editDate.toString().slice(0, 10)})`}
+    </div>
     {frontmatter.description}
   </Card>
-  <div class="prose mt-6">
+  <div class="w-[95%] h-0.5 rounded-full bg-azure mt-4 mx-auto"></div>
+  <div class="prose mt-2">
     <slot />
   </div>
 </BaseLayout>
