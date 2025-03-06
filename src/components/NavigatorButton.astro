@@ -1,0 +1,13 @@
+---
+
+
+---
+<div class="m-1 self-center NavButton cursor-pointer md:hidden w-full text-center">
+  NAV
+</div>
+
+<script>
+  document.querySelector("div.NavButton")?.addEventListener("click", () => {
+    document.querySelector("div.Navigator")?.classList.toggle("hidden")
+  })
+</script>
